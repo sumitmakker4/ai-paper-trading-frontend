@@ -1,0 +1,35 @@
+/** Include every snapshot dimension; never share private data across users or replay clocks. */
+export const queryKeys = {
+  user: (userId) => ['user', userId],
+  session: (userId, sessionId) => ['user', userId, 'session', sessionId],
+  market: ({
+    userId,
+    sessionId,
+    instrumentId,
+    timeframe = '1d',
+    asOf,
+    resource,
+    filters = {},
+    limit,
+    cursor = null,
+  }) => [
+    'user',
+    userId,
+    'session',
+    sessionId,
+    'market',
+    instrumentId,
+    timeframe,
+    asOf,
+    resource,
+    { filters, limit, cursor },
+  ],
+  account: ({ userId, sessionId, resource, filters = {}, limit, cursor = null }) => [
+    'user',
+    userId,
+    'session',
+    sessionId,
+    resource,
+    { filters, limit, cursor },
+  ],
+};

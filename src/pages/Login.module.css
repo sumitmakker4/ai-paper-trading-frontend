@@ -1,0 +1,162 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 40px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: -0.6px;
+}
+.brand b {
+  color: var(--accent);
+  font-weight: 500;
+}
+.logo {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 25px;
+}
+.header button {
+  min-width: 44px;
+  padding: 8px;
+  font-size: 20px;
+}
+.main {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  padding: 40px 20px 64px;
+}
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.eyebrow {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  font-weight: 600;
+}
+.card h1 {
+  margin: 16px 0 10px;
+  font-size: 29px;
+  letter-spacing: -0.8px;
+  font-weight: 600;
+}
+.intro {
+  margin: 0 0 30px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.fields {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 22px;
+  font-size: 13px;
+}
+.fields input:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.fields button {
+  margin-top: 4px;
+}
+.notice {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 16px 0 0;
+}
+.private {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+  margin-top: 26px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.private span {
+  color: var(--accent);
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+}
+.footer p {
+  font-size: 11px;
+  letter-spacing: 0;
+  margin-top: 8px;
+  line-height: 1.8;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.formError {
+  color: var(--loss);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.acknowledge {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  line-height: 1.7;
+  color: var(--muted);
+  cursor: pointer;
+}
+.acknowledge input {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 20px;
+  }
+  .main {
+    padding: 28px 16px;
+  }
+  .card {
+    padding: 28px 24px;
+  }
+}
